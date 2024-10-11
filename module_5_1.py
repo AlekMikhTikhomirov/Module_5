@@ -5,10 +5,10 @@ class House:
 
     def go_to(self, new_floor):
         self.new_floor = int(input("Enter the floor number you want to go (or lift): "))
-        if self.new_floor <= self.number_of_floors:
+        if self.new_floor <= self.number_of_floors and self.new_floor >= 1:
             for i in range(self.new_floor):
                 print(i+1)
-        elif self.new_floor > self.number_of_floors:
+        elif self.new_floor > self.number_of_floors or self.new_floor < 1:
             print("No such floor in this house")
 
 house_1 = House('', 0)
